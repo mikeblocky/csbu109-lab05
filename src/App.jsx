@@ -16,14 +16,14 @@ export default function App() {
       <div className="container">
         <Routes>
           <Route index element={<Overview />} />
-          <Route path="/ex13" element={<Exercise13 />} />
-          <Route path="/ex14" element={<Exercise14 />} />
-          <Route path="/ex15" element={<Exercise15 />} />
-          <Route path="/ex16" element={<Exercise16 />} />
-          <Route path="/ex17" element={<Exercise17 />} />
-          <Route path="/ex18" element={<Exercise18Info />} />
-          <Route path="/ex19" element={<Exercise19Info />} />
-          <Route path="/tests" element={<BrowserTests />} />
+          <Route path="ex13" element={<Exercise13 />} />
+          <Route path="ex14" element={<Exercise14 />} />
+          <Route path="ex15" element={<Exercise15 />} />
+          <Route path="ex16" element={<Exercise16 />} />
+          <Route path="ex17" element={<Exercise17 />} />
+          <Route path="ex18" element={<Exercise18Info />} />
+          <Route path="ex19" element={<Exercise19Info />} />
+          <Route path="tests" element={<BrowserTests />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
