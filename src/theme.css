@@ -1,0 +1,123 @@
+/* Import Geist Mono font (npm: @fontsource/geist-mono) */
+@import '@fontsource/geist-mono/400.css';
+@import '@fontsource/geist-mono/500.css';
+@import '@fontsource/geist-mono/600.css';
+
+:root {
+  --bg: #f7f1e4;         /* soft beige */
+  --bg-2: #efe6d6;       /* slightly deeper beige */
+  --text: #2b2624;       /* deep coffee */
+  --muted: #6b5f5a;      /* muted brown */
+  --brand: #8a6e3d;      /* mellow ochre */
+  --card: #fffaf0;       /* off-white */
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(34, 22, 0, 0.08);
+  --shadow-strong: 0 18px 48px rgba(34, 22, 0, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background: linear-gradient(180deg, var(--bg), var(--bg-2));
+  color: var(--text);
+}
+
+a {
+  color: var(--brand);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+  background: color-mix(in oklab, var(--bg) 70%, white 30%);
+  border-bottom: 1px solid color-mix(in oklab, var(--bg-2) 60%, #0000 40%);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.brand {
+  font-weight: 600;
+  letter-spacing: .5px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  border: 1px solid color-mix(in oklab, var(--bg-2) 60%, #0000 40%);
+  transition: transform .12s ease, box-shadow .12s ease;
+  font-size: 13px;
+}
+
+.tab:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-strong);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid color-mix(in oklab, var(--bg-2) 60%, #0000 40%);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid color-mix(in oklab, var(--bg-2) 60%, #0000 40%);
+  background: var(--card);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform .08s ease, box-shadow .08s ease;
+}
+
+.btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-strong); }
+.btn:active { transform: translateY(0); }
+
+.input {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid color-mix(in oklab, var(--bg-2) 60%, #0000 40%);
+  background: white;
+  font-family: inherit;
+}
+.label { font-size: 12px; color: var(--muted); }
+.stack { display: grid; gap: 12px; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
